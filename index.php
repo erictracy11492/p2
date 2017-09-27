@@ -1,4 +1,4 @@
-<?php require('Form.php');
+<?php require('form.php');
 use DWA\Form; ?>
 
 <!doctype html>
