@@ -24,6 +24,8 @@ use DWA\Form; ?>
           <p id="beforewarning">*Letters and spaces only</p>
           <textarea name="usertext" rows="6" cols="70"></textarea>
           
+          <p>Rules: Words that begin with a consonant shift the first letter to the end and append suffix. Words that begin with a vowel add 'way' to the end.</p>
+          
           <!-- Suffix -->
           <h2>Suffix:</h2>
             <input type="radio" name="suffix" value="ay" checked> "ay"<br>
@@ -53,7 +55,7 @@ use DWA\Form; ?>
                     if (empty($errors)) {
                         foreach ($words as $word) {
                             $translatedword = substr($word, 1);
-                            $vowels = str_split('aeiou');
+                            $vowels = str_split('aeiouAEIOU');
                             //if (in_array($translatedword, $vowels))
                             if (isset($_GET['threeletter'])) {
                                 if (strlen($word) > 3) {
